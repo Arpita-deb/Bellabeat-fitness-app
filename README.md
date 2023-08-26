@@ -1,11 +1,7 @@
 # Bellabeat-fitness-app
 
 ## Introduction:
-Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company.
-
-## Objective:
-Analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
-
+Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I'll analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
 ## Tools used:
 R programming Language and RStudio 
@@ -16,15 +12,33 @@ R programming Language and RStudio
 3. Data Visualization
 
 # Phase-1 ASK
+
+## Key stakeholders:
+
+* *Urška Sršen:* Bellabeat’s cofounder and Chief Creative Officer
+* *Sando Mur:* Mathematician and Bellabeat’s cofounder; key member of the Bellabeat executive team
+* *Bellabeat marketing analytics team:* A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. You joined this team six months ago and have been busy learning about Bellabeat’’s mission and business goals — as well as how you, as a junior data analyst, can help Bellabeat achieve them.
+
+## Products: 
+
+* *Bellabeat app:* The Bellabeat app provides users with health data related to their activity, sleep, stress, menstrual cycle, and mindfulness habits. This data can help users better understand their current habits and make healthy decisions. The Bellabeat app connects to their line of smart wellness products.
+  
+* *Leaf:* Bellabeat’s classic wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects to the Bellabeat app to track activity, sleep, and stress.
+  
+* *Time:* This wellness watch combines the timeless look of a classic timepiece with smart technology to track user activity, sleep, and stress. The Time watch connects to the Bellabeat app to provide you with insights into your daily wellness.
+  
+* *Spring:* This is a water bottle that tracks daily water intake using smart technology to ensure that you are appropriately hydrated throughout the day. The Spring bottle connects to the Bellabeat app to track your hydration levels.
+  
+* *Bellabeat membership:* Bellabeat also offers a subscription-based membership program for users. Membership gives users 24/7 access to fully personalized guidance on nutrition, activity, sleep, health and
+beauty, and mindfulness based on their lifestyle and goals.
+
 ## Statement of the Business task:
 Analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
-## Key stakeholders:
-Urška Sršen, Bellabeat’s co-founder and Chief Creative Officer
-Sando Mur, Mathematician and Bellabeat’s cofounder
-The Bellabeat marketing analytics team.
-
-For this project we'll focus on the Bellabeat app. Now we want to know how FitBit users use FitBit to keep a track of their health. The data provided here may help us find the answer to the question How do our users use our smart devices?. In order to do so we need to find out which aspect of the device people like most and which will be most useful in providing the important information that the users seek.
+For this project we'll focus on the Bellabeat app. Now we want to know how FitBit users use FitBit to keep a track of their health. The data provided here may help us find the answer to the following questions:
+1. What are some trends in smart device usage?
+2. How could these trends apply to Bellabeat customers?
+3. How could these trends help influence Bellabeat marketing strategy?
 
 # Phase-2 PREPARE
 ## Data Dictionary:
@@ -49,6 +63,9 @@ In this phase of data analysis process we're going to-
 * Identify trends and relationships.
 
 # Phase 5 SHARE
+
+## Summary of the analysis:
+
 Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the keystakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision.
 
 But from this small sample size dataset we can still get some insights.The Bellabeat app can consider the following matrices to provide accurate informations about the daily activities of the users:
