@@ -41,13 +41,11 @@ For this project we'll focus on the Bellabeat app. Now we want to know how FitBi
 3. How could these trends help influence Bellabeat marketing strategy?
 
 # Phase-2 PREPARE
-## Data Dictionary:
+## Dataset used:
 
+[FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit)
 
-
-
-
-
+This Kaggle data set contains personal fitness tracker from thirty fitbit users. Thirty eligible Fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart rate that can be used to explore users’ habits
 
 ## Data Credibility and Integrity:
 Due to the limitation of size (30 users) and not having any demographic information we could encounter a sampling bias. We are not sure if the sample is representative of the population as a whole. Another problem we would encounter is that the dataset is not current and also the time limitation of the survey (2 months long).
