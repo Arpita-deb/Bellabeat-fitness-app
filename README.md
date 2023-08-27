@@ -114,7 +114,12 @@ In this phase of data analysis process we're going to-
      3. active minutes
      4. sedentary minutes
      5. total minutes asleep
-
+4. Based on total daily steps taken, the users are grouped into 4 categories -
+   * Sedentary- mean daily steps is less than 5000
+   * lightly active-mean daily steps is between 5000 and 7499
+   * faily active- mean daily steps is 7500 and 9999
+   * very active - mean daily steps is greater than 10000
+     
 4. Identify trends and relationships:
      1. Calories burned: Calories burned is positively related with total steps taken, total distance travelled and total activity minutes.
      2. Sedentary minutes: Sedentary minutes negatively related with total steps,  total distance and lightly active minutes
@@ -124,6 +129,12 @@ In this phase of data analysis process we're going to-
 # Phase 5 SHARE
 
 ## Summary of the analysis:
+
+1. Mean daily steps: 8108
+2. Mean very active minutes: 24 minutes
+3. Mean sedentary minutes : 799 minutes ~ 13.31 hours
+4. Mean calories burned: 2323
+5. Mean minutes asleep: 419 minutes ~ 7 hours
 
 Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the keystakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision.
 
