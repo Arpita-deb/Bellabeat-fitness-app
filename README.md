@@ -4,9 +4,6 @@
 ## Introduction:
 Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I'll analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
-## Tools used:
-R programming Language and RStudio 
-
 ## Methodologies used:
 1. Exploratory Data Analysis
 2. Descriptive Statistics
@@ -37,15 +34,15 @@ beauty, and mindfulness based on their lifestyle and goals.
 Analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
 ## Deliverables:
-You will produce a report with the following deliverables:
+Produce a report with the following deliverables:
 1. A clear summary of the business task
 2. A description of all data sources used
 3. Documentation of any cleaning or manipulation of data
-4. A summary of your analysis
+4. A summary of the analysis
 5. Supporting visualizations and key findings
-6. Your top high-level content recommendations based on your analysis
+6. High-level content recommendations based on the analysis
 
-For this project we'll focus on the Bellabeat app. Now we want to know how FitBit users use FitBit to keep a track of their health. The data provided here may help us find the answer to the following questions:
+For this project I'll focus on the Bellabeat app. We want to know how FitBit users use FitBit to keep a track of their health. The data provided here may help us find the answer to the following questions:
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
 3. How could these trends help influence Bellabeat marketing strategy?
@@ -83,7 +80,7 @@ I use the R0CCC method to check the integrity and reliability of the data.
 
 # Phase-3 PROCESS
 1. Choosing the tools:
-   For data processing and cleaning I'm using R programming language is used and RStudio is used as the IDE. 
+   For data processing and cleaning I'm using R programming language and RStudio as IDE. 
 
 2. Checking the data for errors:
    1. After importing the files, saved them in different dataframes namely activity and hourly_sleep
