@@ -142,8 +142,9 @@ In this phase of data analysis process we're going to-
 
 ![Rplot01](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41057731-fe3e-466f-8f3c-9943c9b10e6a)
 
+![cal vs dist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41f37a24-9044-48a1-a0f9-81155fcde8f7)
 
-
+![cal vs tot step](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/2075b101-a0a7-4f9d-8441-06bce9d65177)
 
 ![steps hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/99f5c263-0bd1-4bf9-8357-a65fbb02b647)
 
@@ -157,6 +158,11 @@ In this phase of data analysis process we're going to-
 
 ![total min in bed hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/fff3eb94-8d4e-4c96-ac41-5e94ec8eae5c)
 
+![1](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/6b0e848e-f385-4315-a83d-d379c98cd956)
+
+![2](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cfb5839f-ba59-45be-a7da-1b99fb3ae36d)
+
+![3](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/7e71f8a8-2b2e-4176-b7f3-90b9619a87dd)
 
 ![sleep type](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/80b16384-f504-47ff-bc18-709b44c012b2)
 
