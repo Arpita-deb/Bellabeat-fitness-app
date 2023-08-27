@@ -138,7 +138,27 @@ In this phase of data analysis process we're going to-
 # Phase 5 SHARE
 
 ## Visualizations: 
+![correlation matrix](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cc3af7cf-ddbb-4052-94d2-360612e1009a)
 
+![Rplot01](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41057731-fe3e-466f-8f3c-9943c9b10e6a)
+
+
+
+
+![steps hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/99f5c263-0bd1-4bf9-8357-a65fbb02b647)
+
+![calorie hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/b4a0115e-8477-4f7f-92cb-44789795caf1)
+
+![very active minutes hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/f4be9354-e2aa-4b39-8946-f3bc8c920268)
+
+![sedentary](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/8e1afd24-7086-485c-9d81-6de364ee01ad)
+
+![minutes asleep hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/f54eeafe-9288-48e8-bdcd-591bbfefd383)
+
+![total min in bed hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/fff3eb94-8d4e-4c96-ac41-5e94ec8eae5c)
+
+
+![sleep type](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/80b16384-f504-47ff-bc18-709b44c012b2)
 
 ## Summary of the analysis:
 
