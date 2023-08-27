@@ -1,4 +1,5 @@
-# Bellabeat-fitness-app
+# How can a Wellness Technology Company play it smart?
+## Capstone Project from Google Data Analytics Professional Certificate course
 
 ## Introduction:
 Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I'll analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
@@ -35,6 +36,15 @@ beauty, and mindfulness based on their lifestyle and goals.
 ## Statement of the Business task:
 Analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
+## Deliverables:
+You will produce a report with the following deliverables:
+1. A clear summary of the business task
+2. A description of all data sources used
+3. Documentation of any cleaning or manipulation of data
+4. A summary of your analysis
+5. Supporting visualizations and key findings
+6. Your top high-level content recommendations based on your analysis
+
 For this project we'll focus on the Bellabeat app. Now we want to know how FitBit users use FitBit to keep a track of their health. The data provided here may help us find the answer to the following questions:
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
@@ -42,15 +52,55 @@ For this project we'll focus on the Bellabeat app. Now we want to know how FitBi
 
 # Phase-2 PREPARE
 ## Dataset used:
+[FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit) from Kaggle is the primary source for this project. It consists of 18 files that contain various information metrics based on which we can provide recommendation to the BellaBeat stakeholders.
 
-[FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit)
+For this project I'll be using only 2 files and later merge them to create one file to work upon-
+* dailyActivity_merged.csv
+* sleepDay_merged.csv
 
-This Kaggle data set contains personal fitness tracker from thirty fitbit users. Thirty eligible Fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart rate that can be used to explore users’ habits
+I use the R0CCC method to check the integrity and reliability of the data.
 
-## Data Credibility and Integrity:
-Due to the limitation of size (30 users) and not having any demographic information we could encounter a sampling bias. We are not sure if the sample is representative of the population as a whole. Another problem we would encounter is that the dataset is not current and also the time limitation of the survey (2 months long).
+1. **Reliability**:  
+   The data set used for this project is provided in Kaggle. It contains personal fitness tracker data from 30 fitbit users. There is no information about the age, gender, profession, accuracy or bias during collection.
+
+2. **Originality**:
+   This data was collected by Amazon Turk between 12/03/2016 - 12/05/2016 and has been preprocessed and uploaded by Kaggle User Mobius. The data set is licensed under Creative Commons which claims no copyright of the data and allows copy, modification and performing work,even for commercial purposes, all without asking permission. Since the data was collected from third party, the originality cannot be vented.
+
+3. **Comprehensiveness**:
+   30 eligible FitBit users consented in submission of their health tracker data, that includes minute-level output for physical activity, heart rate, sleep monitoring. However, the dataset contains many limitations:
+   * There's no information about the person's age, gender, height, weight, profession etc, that helps us identify patterns of activity of individual users. We are not sure if the sample is representative of the population as a whole.
+   * There is no information about the unit of distance.
+   * There are no information about intensity, its unit and how it is measured.
+   * There are inconsistencies in logged data, not all 30 users have data for full 30 days.
+   * The data contains 1440 minutes of sedentary minutes which is equivalent to a day, indicating that they were not wearing the tracker throughout the day.
+   * The data contains informations from March to May. Since the data spreads for both April and May, there are participants with 31 days of data, making the time-frame for data analysis inconsistent.
+
+4. **Citation**:
+   Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894
+
+5. **Current**:
+   This data was collected from 12/03/2016 to 12/05/2016, which indicates that the data is quite outdated. It decreases the data's usability. 
 
 # Phase-3 PROCESS
+1. Choosing the tools:
+   For data processing and cleaning I'm using R programming language is used and RStudio is used as the IDE. 
+
+2. Checking the data for errors:
+   1. After importing the files, saved them in different dataframes namely activity and hourly_sleep
+   2. Checked their datatypes using spec() function.
+   3. Checked for null values. There was none.
+   4. checked for duplicates, and removed 3 duplicate entries from hourly_sleep dataset. 
+
+3. Transforming the data to work with it effectively:
+   1. Changed the column names for more consistent and cleaner names usinf clean_names() function from janitor package. It changed the CamelCase names to lower_snake_case names.
+   2. Changed the Date
+   3. Merged the two datasets into one daily_activity_sleep 
+   
+4. Document the cleaning process.
+
+
+
+
 
 # Phase-4 ANALYSIS
 In this phase of data analysis process we're going to-
