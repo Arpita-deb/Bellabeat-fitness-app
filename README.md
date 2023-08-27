@@ -106,27 +106,39 @@ In this phase of data analysis process we're going to-
    Selected the only columns required for the analysis.
 
 3. Perform calculations:
-  1. Performed descriptive statistics on the numerical column.
+   
+  1. Performed descriptive statistics on the numerical column and visualized the results through histograms.
+  
   2. Created a correlation matrix to find out the strength of relations between various variables.
-  3. The following metrics are important for evaluating the performance of fitness tracking system-
+  
+  3. Identified the following metrics to evaluate the performance of fitness tracking system-
      1. total steps taken
      2. calories burned
      3. active minutes
      4. sedentary minutes
      5. total minutes asleep
-4. Based on total daily steps taken, the users are grouped into 4 categories -
-   * Sedentary- mean daily steps is less than 5000
-   * lightly active-mean daily steps is between 5000 and 7499
-   * faily active- mean daily steps is 7500 and 9999
-   * very active - mean daily steps is greater than 10000
-     
+  
+  4. Based on total daily steps taken, grouped the users into 4 categories -
+     1. Sedentary- mean daily steps is less than 5000
+     2. lightly active-mean daily steps is between 5000 and 7499
+     3. faily active- mean daily steps is 7500 and 9999
+     4. very active - mean daily steps is greater than 10000
+  
+  5. Based on total minutes asleep, grouped the users into into 3 categories -
+     1. Bad Sleep - mean daily sleeping time is less than 360 mins (6 hours)
+     2. Normal Sleep - mean daily sleeping time is between 360 mins (6 hours)  to 480 mins (8 hours)
+     3. Over Sleep - mean daily sleeping time is greater than 480 mins (8 hours)
+        
 4. Identify trends and relationships:
      1. Calories burned: Calories burned is positively related with total steps taken, total distance travelled and total activity minutes.
-     2. Sedentary minutes: Sedentary minutes negatively related with total steps,  total distance and lightly active minutes
+     2. Sedentary minutes: Sedentary minutes is negatively related with total steps,  total distance and lightly active minutes
      3. Active minutes: positvely related with total steps, total distance, fairly active minutes and calories, none of them strongly correlated.
-     4. total minutes asleep: positively related with total time in bed.
-        
+     4. Total minutes asleep: positively related with total time in bed.
+
 # Phase 5 SHARE
+
+## Visualizations: 
+
 
 ## Summary of the analysis:
 
@@ -136,9 +148,10 @@ In this phase of data analysis process we're going to-
 4. Mean calories burned: 2323
 5. Mean minutes asleep: 419 minutes ~ 7 hours
 
-Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the keystakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision.
 
-But from this small sample size dataset we can still get some insights.The Bellabeat app can consider the following matrices to provide accurate informations about the daily activities of the users:
+# Phase 6 : ACT
+
+Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the keystakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision. But from this small sample size dataset we can still get some insights.The Bellabeat app can consider the following matrices to provide accurate informations about the daily activities of the users:
 
 * Daily total steps
 * Daily calories burned
@@ -147,9 +160,6 @@ But from this small sample size dataset we can still get some insights.The Bella
 * Duration of sleeping (light, normal or over sleep)
 
 As these variables are closely related to each other, one factor affects the others. Using the informations from those matrices the Bellabeat app can further give information about user's weight, heartrate, cholesterol level, and suggest healthy eating habits, recommed physical practices and back up their claims by providing scientific facts.
-
-
-# Phase 6 : ACT
 
 Some recommendation for the Bellabeat app:
 
@@ -162,3 +172,14 @@ Some recommendation for the Bellabeat app:
 * The Bellabeat app can notify the users when they're sitting(sedentary time) for more than that is healthy, and remind them to do some light activity like, taking a stroll outside, or stretching up a bit etc.
 
 * When a user does the recommended activities, the Bellabeat app can show motivational messages and reward them. That way the users will then be encouraged and they'll continue to do the hard work.
+
+
+# References:
+
+* [spec()](https://readr.tidyverse.org/reference/spec.html)
+* [Janitor Package](https://www.rdocumentation.org/packages/janitor/versions/2.2.0)
+* [merge()](https://rdrr.io/github/Rdatatable/data.table/man/merge.html)
+* [n_distinct()](https://rdrr.io/cran/dplyr/man/n_distinct.html)
+* [Correlation Matrices](https://r-coder.com/correlation-plot-r/)
+* [Histogram in r](https://www.programiz.com/r/histogram)
+* [How much sleep do I need?](https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html)
