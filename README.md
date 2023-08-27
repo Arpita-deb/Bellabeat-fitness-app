@@ -55,7 +55,7 @@ For this project I'll be using only 2 files and later merge them to create one f
 * dailyActivity_merged.csv
 * sleepDay_merged.csv
 
-I use the R0CCC method to check the integrity and reliability of the data.
+I used the R0CCC method to check the integrity and reliability of the data.
 
 1. **Reliability**:  
    The data set used for this project is provided in Kaggle. It contains personal fitness tracker data from 30 fitbit users. There is no information about the age, gender, profession, accuracy or bias during collection.
@@ -79,6 +79,7 @@ I use the R0CCC method to check the integrity and reliability of the data.
    This data was collected from 12/03/2016 to 12/05/2016, which indicates that the data is quite outdated. It decreases the data's usability. 
 
 # Phase-3 PROCESS
+
 1. Choosing the tools:
    For data processing and cleaning I'm using R programming language and RStudio as IDE. 
 
@@ -86,27 +87,40 @@ I use the R0CCC method to check the integrity and reliability of the data.
    1. After importing the files, saved them in different dataframes namely activity and hourly_sleep
    2. Checked their datatypes using spec() function.
    3. Checked for null values. There was none.
-   4. checked for duplicates, and removed 3 duplicate entries from hourly_sleep dataset. 
+   4. Checked for duplicates, and removed 3 duplicate entries from hourly_sleep dataset. 
 
 3. Transforming the data to work with it effectively:
-   1. Changed the column names for more consistent and cleaner names usinf clean_names() function from janitor package. It changed the CamelCase names to lower_snake_case names.
-   2. Changed the Date
-   3. Merged the two datasets into one daily_activity_sleep 
+   1. Changed the column names for more consistent and cleaner names using clean_names() function from janitor package. It changed the CamelCase names to lower_snake_case names.
+   2. Created two copies of the cleaned data. Used the copied data for analysis.
    
 4. Document the cleaning process.
-
-
-
-
+   1. All the data processing and transforming steps been documented in this report as well as in the code as well. 
 
 # Phase-4 ANALYSIS
+
 In this phase of data analysis process we're going to-
+1. Aggregate the data :
+   Merged the two datasets into one final data set 'daily_activity_sleep'.
+   
+2. Organize and format the data:
+   Selected the only columns required for the analysis.
 
-* Aggregate the data so it’s useful and accessible.
-* Organize and format the data.
-* Perform calculations.
-* Identify trends and relationships.
+3. Perform calculations:
+  1. Performed descriptive statistics on the numerical column.
+  2. Created a correlation matrix to find out the strength of relations between various variables.
+  3. The following metrics are important for evaluating the performance of fitness tracking system-
+     1. total steps taken
+     2. calories burned
+     3. active minutes
+     4. sedentary minutes
+     5. total minutes asleep
 
+4. Identify trends and relationships:
+     1. Calories burned: Calories burned is positively related with total steps taken, total distance travelled and total activity minutes.
+     2. Sedentary minutes: Sedentary minutes negatively related with total steps,  total distance and lightly active minutes
+     3. Active minutes: positvely related with total steps, total distance, fairly active minutes and calories, none of them strongly correlated.
+     4. total minutes asleep: positively related with total time in bed.
+        
 # Phase 5 SHARE
 
 ## Summary of the analysis:
