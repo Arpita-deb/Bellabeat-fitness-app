@@ -1,41 +1,40 @@
-# loading the libraries
-
+# Loading the libraries
 library(tidyverse)
 library(lubridate)
 library(janitor)
 library(corrplot)
 library(ggcorrplot)
 
-# importing the data sets
+# Importing the data sets
 activity <- read_csv("dailyActivity_merged.csv")
-View(activity)
-
 hourly_sleep <- read_csv("sleepDay_merged.csv")
+
+View(activity)
 View(hourly_sleep)
 
 # Checking the datatypes
 spec(activity)
 spec(hourly_sleep)
 
-#Looking for null values.
+# Looking for null values
 sum(is.na(activity))
 sum(is.na(hourly_sleep))
 
-
-#checking column wise for null values
+# Checking column wise for null values
 colSums(is.na(activity))
 colSums(is.na(hourly_sleep))
 
 # Looking for Duplicates
-sum(duplicated(activity))
-sum(duplicated(hourly_sleep))
-hourly_sleep <- hourly_sleep %>%
-  distinct() 
+sum(duplicated(activity))                     # Checking for duplicates
 
-sum(duplicated(hourly_sleep))
+sum(duplicated(hourly_sleep))                 # There are 3 duplicates
+
+hourly_sleep <- hourly_sleep %>% distinct()   # Selecting only the distinct value 
+
+sum(duplicated(hourly_sleep))                 # Checking again for duplicates, there's none
 
 # Clean and Consistent names
-activity <- activity %>% clean_names()
+activity <- activity %>% clean_names()        # clean_names() from Janitor package changes the column names into lower snake case
 head(activity)
 hourly_sleep <- hourly_sleep %>% clean_names()
 head(hourly_sleep)
@@ -46,10 +45,10 @@ sleep_df <- data.frame(hourly_sleep)
 
 # Merging Data sets
 
-daily_activity_sleep <- merge(activity, hourly_sleep, by=c("id"))
+daily_activity_sleep <- merge(activity, hourly_sleep, by=c("id")) 
 head(daily_activity_sleep)
 
-# selecting the required columns only
+# Selecting the required columns only
 
 daily_activity_sleep <- daily_activity_sleep %>%  
                         select(id,
@@ -66,17 +65,18 @@ daily_activity_sleep <- daily_activity_sleep %>%
                                total_minutes_asleep, 
                                total_time_in_bed 
                         )
+
 # Exploratory Data Analysis
 
-#Number of distinct users for each data set 
-n_distinct(activity$id)                     #There are 33 unique users in activity data set
-n_distinct(hourly_sleep$id)                 #There are 24 unique users in activity data set
-
+# Number of distinct users for each data set 
+n_distinct(activity$id)                     # There are 33 unique users in activity data set
+n_distinct(hourly_sleep$id)                 # There are 24 unique users in activity data set
 
 # Statistical summary
-daily_activity_sleep %>% summary()
+daily_activity_sleep %>% summary()          # Gives the general statistics such as mean, median, max, min values
 
 # Histograms
+# Gives idea about the distribution of the values for different attributes
 
 hist(daily_activity_sleep$calories,
      breaks=10,
@@ -116,7 +116,9 @@ hist(daily_activity_sleep$total_time_in_bed,
 
 
 # Correlation matrix
-df <- daily_activity_sleep %>% select(total_steps,
+# Helps us understand the strength of relation between various variables
+
+df <- daily_activity_sleep %>% select(total_steps,                 # Selecting only the numerical columns we are interested in
                                       total_distance,
                                       very_active_minutes,
                                       fairly_active_minutes,
@@ -126,21 +128,27 @@ df <- daily_activity_sleep %>% select(total_steps,
                                       total_sleep_records,
                                       total_minutes_asleep, 
                                       total_time_in_bed)
-r <- cor(df,use="complete.obs")
-round(r,2)
 
-ggcorrplot(r, title='Correlation Matrix')
+# cor() function returns a correlation data frame rather than a matrix
+
+r <- cor(df,use="complete.obs")            # complete.obs means taking account of all observations                             
+
+round(r,2)                                 # rounding off the correlation strength upto 2 decimal points
+
+ggcorrplot(r, title='Correlation Matrix')  # plotting the correlation matrix
 
 
 # The correlation matrix gives us many information about the relations between the variables. 
-
 # It's clear from the correlation matrix, calories burned is positively correlated with-
 # 1. total steps taken 2. total distance traveled  and 3.active minutes 
 
-# Let's find out their correlation strength 
-
+# Finding out correlation strengths between calories burned and total steps taken
 cor(daily_activity_sleep$total_steps, daily_activity_sleep$calories)            # 0.4462722
+
+# Finding out correlation strengths between calories burned and total distance traveled
 cor(daily_activity_sleep$total_distance, daily_activity_sleep$calories)         # 0.5506964
+
+# Finding out correlation strengths between calories burned and active minutes 
 cor(daily_activity_sleep$very_active_minutes, daily_activity_sleep$calories)    # 0.6218306
 
 
@@ -185,8 +193,8 @@ ggplot(daily_activity_sleep, aes(x=total_distance, y=calories)) +
 
 # Statistical summary according to four user types
 
-# creating a data frame with mean values from daily_activity_sleep data set
-# It gives average values of all the metrics for 24 users
+# Creating a data frame with mean values from daily_activity_sleep data set grouped by individual users (id)
+
 daily_average <- daily_activity_sleep %>%
   group_by(id) %>%                                   # to get unique values for each fitbit user
   summarise (mean_daily_steps = mean(total_steps), 
@@ -199,23 +207,19 @@ daily_average <- daily_activity_sleep %>%
              mean_sedentary_min=mean(sedentary_minutes) 
              )
 
-#creating a data frame 'user_type' with an additional column 'user_type'
-#Creating a new data frame that divides the users into 4 groups based on their total daily steps taken 
+# Creating a new data frame that divides the above data frame into 4 groups based on their total daily steps taken 
 
 user_type <- daily_average %>%
-  mutate(user_type = case_when(
+  mutate(user_type = case_when(                                              # adds a column user type in the daily_average data frame
     mean_daily_steps < 5000 ~ "sedentary",
     mean_daily_steps >= 5000 & mean_daily_steps < 7499 ~ "lightly active", 
     mean_daily_steps >= 7500 & mean_daily_steps < 9999 ~ "fairly active", 
     mean_daily_steps >= 10000 ~ "very active"))
 
-View(user_type)
-
-#counting the number of users and finding out mean for all the variables by grouping them into user types 
-# getting the statistics for each user types
+# Grouping the user_type data frame by user_type and getting the statistics for each user type
 
 average_stats <- user_type%>%
-                  group_by(user_type)%>%
+                  group_by(user_type)%>%                                      
                   summarise(count_of_users=n(),
                   average_total_steps=sum(mean_daily_steps)/count_of_users,
                   average_calories=sum(mean_daily_calories)/count_of_users,
@@ -225,7 +229,7 @@ average_stats <- user_type%>%
                   average_lightly_active_min=sum(mean_lightly_active_min)/count_of_users,
                   average_sedentary_min=sum(mean_sedentary_min)/count_of_users)
 
-# bar plot for Mean daily steps by User type
+# Plotting a bar chart for Avearage daily steps by User type
 
 ggplot(average_stats,aes(x=user_type, y=average_total_steps)) +
   geom_col(width=0.6, fill='gold1') +
@@ -236,7 +240,8 @@ ggplot(average_stats,aes(x=user_type, y=average_total_steps)) +
   ylab("Mean daily steps") +
   theme(panel.background = element_blank(),plot.title = element_text( size=16),text= element_text(size=12))
 
-# bar plot for Average calories burned by User type
+# Plotting a bar chart for Average calories burned by User type
+
 ggplot(average_stats,aes(x=user_type, y=average_calories)) +
   geom_col(width=0.6, fill='orange') +
   labs(title="Average calories burned Vs User type",
@@ -246,7 +251,8 @@ ggplot(average_stats,aes(x=user_type, y=average_calories)) +
   ylab("Mean calories") +
   theme(panel.background = element_blank(),plot.title = element_text( size=16), text= element_text(size=12))
 
-# bar plot for Average sleeping time (in minutes) by User type
+# Plotting a bar chart for Average sleeping time (in minutes) by User type
+
 ggplot(average_stats,aes(x=user_type, y=average_sleep_minutes)) +
   geom_col(width=0.6, fill='coral') +
   labs(title="Average sleeping time (in minutes) Vs User type",
@@ -282,21 +288,3 @@ ggplot(sleep_type, aes(x=sleep_type))+
   xlab('Sleep Type') +
   ylab('Number of Users')+
   theme(panel.background = element_blank(),plot.title = element_text( size=16),text= element_text(size=12))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
