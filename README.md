@@ -108,7 +108,9 @@ The following steps are taken to analyse the data-
 3. **Perform calculations:**
    
   1. Performed descriptive statistics on the numerical columns and visualized the results through histograms.
-  
+
+![Screenshot (534)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/dd1c6e0e-3147-4ec5-8c3b-863d45253c4c)
+
   2. Created a correlation matrix to find out the strength of relations between various variables.
   
   3. Identified the following metrics to evaluate the performance of fitness tracking system-
@@ -137,6 +139,8 @@ The following steps are taken to analyse the data-
      3. Fairly active- mean daily steps is 7500 and 9999
      4. Very active - mean daily steps is greater than 10000
 
+![Screenshot (535)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/2b9850c1-1830-466e-b9b5-08ae6dbd1f6e)
+
 ![1](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/6b0e848e-f385-4315-a83d-d379c98cd956)
 
 ![2](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cfb5839f-ba59-45be-a7da-1b99fb3ae36d)
@@ -144,9 +148,11 @@ The following steps are taken to analyse the data-
 ![3](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/7e71f8a8-2b2e-4176-b7f3-90b9619a87dd)
   
   5. Based on total minutes asleep, I've grouped the users into into 3 categories -
-     1. Bad Sleep - mean daily sleeping time is less than 360 mins (6 hours)
-     2. Normal Sleep - mean daily sleeping time is between 360 mins (6 hours)  to 480 mins (8 hours)
-     3. Over Sleep - mean daily sleeping time is greater than 480 mins (8 hours)
+     1. Bad Sleeper - mean daily sleeping time is less than 360 mins (6 hours)
+     2. Normal Sleeper - mean daily sleeping time is between 360 mins (6 hours)  to 480 mins (8 hours)
+     3. Over Sleeper - mean daily sleeping time is greater than 480 mins (8 hours)
+
+![Screenshot (533)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/c247ac5f-ef7a-4137-b6ec-23784cc24d32)
 
 ![sleep type](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/80b16384-f504-47ff-bc18-709b44c012b2)
         
@@ -172,25 +178,25 @@ From the correlation matrix we can observe the followings-
   
   5. Total minutes asleep is positively related with total time in bed.
 
-
-
-
-   
-
 # Phase 5 SHARE
 
 ## Summary of the analysis:
 
-1. Mean daily steps: 8108
-2. Mean very active minutes: 24 minutes
-3. Mean sedentary minutes : 799 minutes ~ 13.31 hours
-4. Mean calories burned: 2323 units
-5. Mean minutes asleep: 419 minutes ~ 7 hours
+Although the data set had lots of limitations namely lack of reliablity, small number of users, lack of proper details etc, this short exploratory data analysis was able to identify some usage pattern of FitBit Fitness Tracker users.
 
+1. The average daily steps is 8108 steps which approximates the recommendation of 8000 steps per day by CDC (Center for Disease Control & Prevention). But in case of lightly active and sedentary users it is very low(~6800 & ~2800 respectively).
+
+2. The average very active minutes is 24 minutes. From the very active histogram we can see that for majority of the users very active minutes lie between 0 - 10 minutes.
+
+3. The average sedentary minutes is 799 minutes ~ 13.31 hours. This high value of sedentary minutes may be indicative of tracker not being worn throughout the day. However, from the analysis, we can see a visible pattern in sedentary users having more sedentary minutes (~ 19 hrs) than fairly active users (~13 hrs)
+
+4. The average calories burned is 2323 units. According to a study, for a woman the average daily calories burned is 2400 units while for men it is 3100 units. Sedentary people burn lowest calories as they tend to do less exercise compared to fairly active and very active users.
+
+5. The average minutes asleep is 419 minutes ~ 7 hours. People who does some light exercise daily sleeps more (~ 7 hrs) than people who do not exercise (sedentary) at all (~ 6 hrs) and also people who are very active (~ 4.7 hrs).
 
 # Phase 6: ACT
 
-Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the key stakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision. But from this small sample size dataset we can still get some insights. The Bellabeat app can consider the following matrices to provide accurate information about the daily activities of the users:
+The Bellabeat app can consider the following matrices to provide accurate information about the daily activities of the users:
 
 * Daily total steps
 * Daily calories burned
@@ -202,16 +208,19 @@ As these variables are closely related to each other, one factor affects the oth
 
 Some recommendation for the Bellabeat app:
 
-* According to the CDC research taking 8,000 steps per day was associated with a 51% lower risk for all-cause mortality (or death from all causes). Taking 12,000 steps per day was associated with a 65% lower risk compared with taking 4,000 steps. But in our analysis, in case of lightly active and sedentary users it is very low(~6800 & ~2800 respectively). The Bellabeat app can remind the users to take at least 8000 steps explaining the benefits for their health.
-
 * As users do more physical activity, they burn more calories, which in turn, helps them lose more weight. In addition to giving daily updates on calorie burning, Bellabeat can suggest some ideas for low-calorie intakes.
 
 * If users want to improve their sleep, Bellabeat should consider using app notifications to go to bed and notify them if they've had enough sleep or if they overslept.
 
-* The Bellabeat app can notify the users when they're sitting(sedentary time) for more than that is healthy, and remind them to do some light activity like, taking a stroll outside, or stretching up a bit etc.
+* The Bellabeat app can notify the users when they're sitting (sedentary time) for more than that is healthy, and remind them to do some light activity like, taking a stroll outside, or stretching up a bit etc.
 
 * When a user does the recommended activities, the Bellabeat app can show motivational messages and reward them. That way the users will then be encouraged and they'll continue to do the hard work.
 
+# Limitation of the Project:
+
+1. In this project the time of the day is not considered, so we cannot know which hour of the day is more active or when these users tend to take rest.
+2. Since the data set is very small, with only 24 users from the merged dataset, we cannot generalize the sleeping pattern, calories burned or active hours.
+3. The relation between daily steps taken, calories burned and sleeping pattern can not be further investigated without being too specific or in this case, being biased. 
 
 # References:
 
@@ -221,4 +230,5 @@ Some recommendation for the Bellabeat app:
 * [n_distinct()](https://rdrr.io/cran/dplyr/man/n_distinct.html)
 * [Correlation Matrices](https://r-coder.com/correlation-plot-r/)
 * [Histogram in r](https://www.programiz.com/r/histogram)
+* [Higher Daily Step Count Linked with Lower All-cause Mortality](https://www.cdc.gov/media/releases/2020/p0324-daily-step-count.html)
 * [How much sleep do I need?](https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html)
