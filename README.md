@@ -58,10 +58,10 @@ For this project I'll be using only 2 files and later merge them to create one f
 I used the R0CCC method to check the integrity and reliability of the data.
 
 1. **Reliability**:  
-   The data set used for this project is provided in Kaggle. It contains personal fitness tracker data from 30 fitbit users. There is no information about the age, gender, profession, accuracy or bias during collection.
+   The data set used for this project is provided in Kaggle. It contains personal fitness tracker data from 30 fitbit users. There is no information about the age, gender, profession, accuracy or bias during data collection.
 
 2. **Originality**:
-   This data was collected by Amazon Turk between 12/03/2016 - 12/05/2016 and has been preprocessed and uploaded by Kaggle User Mobius. The data set is licensed under Creative Commons which claims no copyright of the data and allows copy, modification and performing work, even for commercial purposes, all without asking permission. Since the data was collected from third party, the originality cannot be vented.
+   This data was collected by Amazon Turk between 12/03/2016 - 12/05/2016 and has been preprocessed and uploaded by Kaggle User Mobius. The data set is licensed under Creative Commons which claims no copyright of the data and allows copy, modification and performing work, even for commercial purposes, all without asking permission. Since the data was collected from third party, the originality cannot be vetted.
 
 3. **Comprehensiveness**:
    30 eligible FitBit users consented in submission of their health tracker data, that includes minute-level output for physical activity, heart rate, sleep monitoring. However, the dataset contains many limitations:
