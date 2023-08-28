@@ -229,6 +229,7 @@ Some recommendation for the Bellabeat app:
 * [merge()](https://rdrr.io/github/Rdatatable/data.table/man/merge.html)
 * [n_distinct()](https://rdrr.io/cran/dplyr/man/n_distinct.html)
 * [Correlation Matrices](https://r-coder.com/correlation-plot-r/)
+* [Correlation Data Frame](https://corrr.tidymodels.org/reference/correlate.html)
 * [Histogram in r](https://www.programiz.com/r/histogram)
 * [Higher Daily Step Count Linked with Lower All-cause Mortality](https://www.cdc.gov/media/releases/2020/p0324-daily-step-count.html)
 * [How much sleep do I need?](https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html)
