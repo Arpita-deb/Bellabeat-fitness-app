@@ -15,7 +15,7 @@ Bellabeat is a high-tech manufacturer of health-focused products for women. It i
 
 * *Urška Sršen:* Bellabeat’s cofounder and Chief Creative Officer
 * *Sando Mur:* Mathematician and Bellabeat’s cofounder; key member of the Bellabeat executive team
-* *Bellabeat marketing analytics team:* A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. You joined this team six months ago and have been busy learning about Bellabeat’’s mission and business goals — as well as how you, as a junior data analyst, can help Bellabeat achieve them.
+* *Bellabeat marketing analytics team:* A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. I joined this team six months ago and have been busy learning about Bellabeat’s mission and business goals — as well as how I, as a junior data analyst, can help Bellabeat achieve them.
 
 ## Products: 
 
@@ -61,7 +61,7 @@ I used the R0CCC method to check the integrity and reliability of the data.
    The data set used for this project is provided in Kaggle. It contains personal fitness tracker data from 30 fitbit users. There is no information about the age, gender, profession, accuracy or bias during collection.
 
 2. **Originality**:
-   This data was collected by Amazon Turk between 12/03/2016 - 12/05/2016 and has been preprocessed and uploaded by Kaggle User Mobius. The data set is licensed under Creative Commons which claims no copyright of the data and allows copy, modification and performing work,even for commercial purposes, all without asking permission. Since the data was collected from third party, the originality cannot be vented.
+   This data was collected by Amazon Turk between 12/03/2016 - 12/05/2016 and has been preprocessed and uploaded by Kaggle User Mobius. The data set is licensed under Creative Commons which claims no copyright of the data and allows copy, modification and performing work, even for commercial purposes, all without asking permission. Since the data was collected from third party, the originality cannot be vented.
 
 3. **Comprehensiveness**:
    30 eligible FitBit users consented in submission of their health tracker data, that includes minute-level output for physical activity, heart rate, sleep monitoring. However, the dataset contains many limitations:
@@ -70,7 +70,7 @@ I used the R0CCC method to check the integrity and reliability of the data.
    * There are no information about intensity, its unit and how it is measured.
    * There are inconsistencies in logged data, not all 30 users have data for full 30 days.
    * The data contains 1440 minutes of sedentary minutes which is equivalent to a day, indicating that they were not wearing the tracker throughout the day.
-   * The data contains informations from March to May. Since the data spreads for both April and May, there are participants with 31 days of data, making the time-frame for data analysis inconsistent.
+   * The data contains information from March to May. Since the data spreads for both April and May, there are participants with 31 days of data, making the time-frame for data analysis inconsistent.
 
 4. **Citation**:
    Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894
@@ -80,34 +80,34 @@ I used the R0CCC method to check the integrity and reliability of the data.
 
 # Phase-3 PROCESS
 
-1. Choosing the tools:
-   For data processing and cleaning I'm using R programming language and RStudio as IDE. 
+1. **Choosing the tools:**
+   For data processing and cleaning I used R programming language and RStudio as IDE. 
 
-2. Checking the data for errors:
-   1. After importing the files, saved them in different dataframes namely activity and hourly_sleep
-   2. Checked their datatypes using spec() function.
+2. **Checking the data for errors:**
+   1. After importing the files, saved them in different data frames *activity* and *hourly_sleep*
+   2. Checked their data types using spec() function.
    3. Checked for null values. There was none.
-   4. Checked for duplicates, and removed 3 duplicate entries from hourly_sleep dataset. 
+   4. Checked for duplicates, and removed 3 duplicate entries from *hourly_sleep* dataset. 
 
-3. Transforming the data to work with it effectively:
+3. **Transforming the data to work with it effectively:**
    1. Changed the column names for more consistent and cleaner names using clean_names() function from janitor package. It changed the CamelCase names to lower_snake_case names.
    2. Created two copies of the cleaned data. Used the copied data for analysis.
    
-4. Document the cleaning process.
-   1. All the data processing and transforming steps been documented in this report as well as in the code as well. 
+4. **Document the cleaning process:**
+   All the data-processing and transforming steps been documented in this report as well as in the code as well. 
 
 # Phase-4 ANALYSIS
 
-In this phase of data analysis process we're going to-
-1. Aggregate the data :
-   Merged the two datasets into one final data set 'daily_activity_sleep'.
+The following steps are taken to analyse the data-
+1. **Aggregate the data:**
+   Merged the two datasets into one final data set *daily_activity_sleep*.
    
-2. Organize and format the data:
+2. **Organize and format the data:**
    Selected the only columns required for the analysis.
 
-3. Perform calculations:
+3. **Perform calculations:**
    
-  1. Performed descriptive statistics on the numerical column and visualized the results through histograms.
+  1. Performed descriptive statistics on the numerical columns and visualized the results through histograms.
   
   2. Created a correlation matrix to find out the strength of relations between various variables.
   
@@ -117,34 +117,6 @@ In this phase of data analysis process we're going to-
      3. active minutes
      4. sedentary minutes
      5. total minutes asleep
-  
-  4. Based on total daily steps taken, grouped the users into 4 categories -
-     1. Sedentary- mean daily steps is less than 5000
-     2. lightly active-mean daily steps is between 5000 and 7499
-     3. faily active- mean daily steps is 7500 and 9999
-     4. very active - mean daily steps is greater than 10000
-  
-  5. Based on total minutes asleep, grouped the users into into 3 categories -
-     1. Bad Sleep - mean daily sleeping time is less than 360 mins (6 hours)
-     2. Normal Sleep - mean daily sleeping time is between 360 mins (6 hours)  to 480 mins (8 hours)
-     3. Over Sleep - mean daily sleeping time is greater than 480 mins (8 hours)
-        
-4. Identify trends and relationships:
-     1. Calories burned: Calories burned is positively related with total steps taken, total distance travelled and total activity minutes.
-     2. Sedentary minutes: Sedentary minutes is negatively related with total steps,  total distance and lightly active minutes
-     3. Active minutes: positvely related with total steps, total distance, fairly active minutes and calories, none of them strongly correlated.
-     4. Total minutes asleep: positively related with total time in bed.
-
-# Phase 5 SHARE
-
-## Visualizations: 
-![correlation matrix](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cc3af7cf-ddbb-4052-94d2-360612e1009a)
-
-![Rplot01](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41057731-fe3e-466f-8f3c-9943c9b10e6a)
-
-![cal vs dist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41f37a24-9044-48a1-a0f9-81155fcde8f7)
-
-![cal vs tot step](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/2075b101-a0a7-4f9d-8441-06bce9d65177)
 
 ![steps hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/99f5c263-0bd1-4bf9-8357-a65fbb02b647)
 
@@ -158,26 +130,67 @@ In this phase of data analysis process we're going to-
 
 ![total min in bed hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/fff3eb94-8d4e-4c96-ac41-5e94ec8eae5c)
 
+  
+  4. Based on total daily steps taken, grouped the users into 4 categories -
+     1. Sedentary- mean daily steps is less than 5000
+     2. Lightly active-mean daily steps is between 5000 and 7499
+     3. Fairly active- mean daily steps is 7500 and 9999
+     4. Very active - mean daily steps is greater than 10000
+
 ![1](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/6b0e848e-f385-4315-a83d-d379c98cd956)
 
 ![2](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cfb5839f-ba59-45be-a7da-1b99fb3ae36d)
 
 ![3](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/7e71f8a8-2b2e-4176-b7f3-90b9619a87dd)
+  
+  5. Based on total minutes asleep, I've grouped the users into into 3 categories -
+     1. Bad Sleep - mean daily sleeping time is less than 360 mins (6 hours)
+     2. Normal Sleep - mean daily sleeping time is between 360 mins (6 hours)  to 480 mins (8 hours)
+     3. Over Sleep - mean daily sleeping time is greater than 480 mins (8 hours)
 
 ![sleep type](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/80b16384-f504-47ff-bc18-709b44c012b2)
+        
+4. **Identify trends and relationships:**
+
+ To find out the strength of relations between various variables I've created a correlation matrix. A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong relationship between variables, 0 a neutral relationship and -1 a not strong relationship.
+
+![correlation matrix](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cc3af7cf-ddbb-4052-94d2-360612e1009a)
+
+From the correlation matrix we can observe the followings-
+
+  1. Calories burned is positively correlated with total steps taken, total distance travelled and total activity minutes. The scatterplots shows their relationship visually.
+
+     ![Rplot01](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41057731-fe3e-466f-8f3c-9943c9b10e6a)
+
+     ![cal vs dist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/41f37a24-9044-48a1-a0f9-81155fcde8f7)
+
+     ![cal vs tot step](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/2075b101-a0a7-4f9d-8441-06bce9d65177)
+  
+  3. Sedentary minutes is negatively related with total steps,  total distance and lightly active minutes
+  
+  4. Active minutes have positive but weak correlation with total steps, total distance, fairly active minutes and calories burned.
+  
+  5. Total minutes asleep is positively related with total time in bed.
+
+
+
+
+   
+
+# Phase 5 SHARE
 
 ## Summary of the analysis:
 
 1. Mean daily steps: 8108
 2. Mean very active minutes: 24 minutes
 3. Mean sedentary minutes : 799 minutes ~ 13.31 hours
-4. Mean calories burned: 2323
+4. Mean calories burned: 2323 units
 5. Mean minutes asleep: 419 minutes ~ 7 hours
 
 
-# Phase 6 : ACT
+# Phase 6: ACT
 
-Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the keystakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision. But from this small sample size dataset we can still get some insights.The Bellabeat app can consider the following matrices to provide accurate informations about the daily activities of the users:
+Since the dataset of FitBit Fitness Tracker users is rather small, I would recommend the key stakeholders to do further analysis with a bigger dataset to clearly find the patterns and user trends and take data driven decision. But from this small sample size dataset we can still get some insights. The Bellabeat app can consider the following matrices to provide accurate information about the daily activities of the users:
 
 * Daily total steps
 * Daily calories burned
@@ -185,13 +198,13 @@ Since the dataset of FitBit Fitness Tracker users is rather small, I would recom
 * Daily sedentary minutes
 * Duration of sleeping (light, normal or over sleep)
 
-As these variables are closely related to each other, one factor affects the others. Using the informations from those matrices the Bellabeat app can further give information about user's weight, heartrate, cholesterol level, and suggest healthy eating habits, recommed physical practices and back up their claims by providing scientific facts.
+As these variables are closely related to each other, one factor affects the others. Using the information from those matrices the Bellabeat app can further give information about user's weight, heart rate, cholesterol level, and suggest healthy eating habits, recommend physical exercises and back up their claims by providing scientific facts.
 
 Some recommendation for the Bellabeat app:
 
 * According to the CDC research taking 8,000 steps per day was associated with a 51% lower risk for all-cause mortality (or death from all causes). Taking 12,000 steps per day was associated with a 65% lower risk compared with taking 4,000 steps. But in our analysis, in case of lightly active and sedentary users it is very low(~6800 & ~2800 respectively). The Bellabeat app can remind the users to take at least 8000 steps explaining the benefits for their health.
 
-* As users do more physical activity, they burn more calories, which in turn helps them lose more weight. In addition to giving daily updates on calorie burning, Bellabeat can suggest some ideas for low-calorie intakes.
+* As users do more physical activity, they burn more calories, which in turn, helps them lose more weight. In addition to giving daily updates on calorie burning, Bellabeat can suggest some ideas for low-calorie intakes.
 
 * If users want to improve their sleep, Bellabeat should consider using app notifications to go to bed and notify them if they've had enough sleep or if they overslept.
 
