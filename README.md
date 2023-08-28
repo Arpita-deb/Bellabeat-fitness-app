@@ -105,24 +105,22 @@ The following steps are taken to analyse the data-
 2. **Organize and format the data:**
    Selected the only columns required for the analysis.
 
-3. **Perform calculations:**
-   
-  1. Performed descriptive statistics on the numerical columns and visualized the results through histograms.
+3. Performed descriptive statistics on the numerical columns and visualized the results through histograms.
 
-![Screenshot (534)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/dd1c6e0e-3147-4ec5-8c3b-863d45253c4c)
+  ![Screenshot (534)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/dd1c6e0e-3147-4ec5-8c3b-863d45253c4c)
 
-  2. Created a correlation matrix to find out the strength of relations between various variables.
+4. Created a correlation matrix to find out the strength of relations between various variables.
   
-  3. Identified the following metrics to evaluate the performance of fitness tracking system-
-     1. total steps taken
-     2. calories burned
-     3. active minutes
-     4. sedentary minutes
-     5. total minutes asleep
-
-![steps hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/99f5c263-0bd1-4bf9-8357-a65fbb02b647)
+5. Identified the following metrics to evaluate the performance of fitness tracking system-
+         1. total steps taken
+         2. calories burned
+         3. active minutes
+         4. sedentary minutes
+         5. total minutes asleep
 
 ![calorie hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/b4a0115e-8477-4f7f-92cb-44789795caf1)
+
+![steps hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/99f5c263-0bd1-4bf9-8357-a65fbb02b647)
 
 ![very active minutes hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/f4be9354-e2aa-4b39-8946-f3bc8c920268)
 
@@ -133,7 +131,7 @@ The following steps are taken to analyse the data-
 ![total min in bed hist](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/fff3eb94-8d4e-4c96-ac41-5e94ec8eae5c)
 
   
-  4. Based on total daily steps taken, grouped the users into 4 categories -
+6. Based on total daily steps taken, grouped the users into 4 categories -
      1. Sedentary- mean daily steps is less than 5000
      2. Lightly active-mean daily steps is between 5000 and 7499
      3. Fairly active- mean daily steps is 7500 and 9999
@@ -147,7 +145,7 @@ The following steps are taken to analyse the data-
 
 ![3](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/7e71f8a8-2b2e-4176-b7f3-90b9619a87dd)
   
-  5. Based on total minutes asleep, I've grouped the users into into 3 categories -
+7. Based on total minutes asleep, I've grouped the users into into 3 categories -
      1. Bad Sleeper - mean daily sleeping time is less than 360 mins (6 hours)
      2. Normal Sleeper - mean daily sleeping time is between 360 mins (6 hours)  to 480 mins (8 hours)
      3. Over Sleeper - mean daily sleeping time is greater than 480 mins (8 hours)
@@ -156,7 +154,7 @@ The following steps are taken to analyse the data-
 
 ![sleep type](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/80b16384-f504-47ff-bc18-709b44c012b2)
         
-4. **Identify trends and relationships:**
+8. **Identify trends and relationships:**
 
  To find out the strength of relations between various variables I've created a correlation matrix. A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong relationship between variables, 0 a neutral relationship and -1 a not strong relationship.
 
@@ -196,6 +194,7 @@ Although the data set had lots of limitations namely lack of reliablity, small n
 
 # Phase 6: ACT
 
+From the FitBit Fitness Tracker data we can infer that the users primarily uses these devices to track their daily calorie burn, physical activity data, heart rate, hydration level and sleeping pattern. 
 The Bellabeat app can consider the following matrices to provide accurate information about the daily activities of the users:
 
 * Daily total steps
@@ -204,7 +203,7 @@ The Bellabeat app can consider the following matrices to provide accurate inform
 * Daily sedentary minutes
 * Duration of sleeping (light, normal or over sleep)
 
-As these variables are closely related to each other, one factor affects the others. Using the information from those matrices the Bellabeat app can further give information about user's weight, heart rate, cholesterol level, and suggest healthy eating habits, recommend physical exercises and back up their claims by providing scientific facts.
+As these variables are closely related to each other, one factor affects the others. Using the information from those matrices the Bellabeat app can further give information about user's weight, heart rate, cholesterol level, hydration level and suggest healthy eating habits, recommend physical exercises and back up their claims by providing scientific facts.
 
 Some recommendation for the Bellabeat app:
 
