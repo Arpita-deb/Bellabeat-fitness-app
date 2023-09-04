@@ -2,7 +2,7 @@
 ## Capstone Project from Google Data Analytics Professional Certificate course
 
 ## Introduction:
-Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I'll analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
+Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I've analyzed smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
 ## Methodologies used:
 1. Exploratory Data Analysis
@@ -217,7 +217,7 @@ Some recommendation for the Bellabeat app:
 
 # Limitation of the Project:
 
-1. In this project the time of the day is not considered, so we cannot know which hour of the day is more active or when these users tend to take rest.
+1. In this project the time of the day is not considered, so we cannot know which hour of the day a user is more active or when tends to take rest.
 2. Since the data set is very small, with only 24 users from the merged dataset, we cannot generalize the sleeping pattern, calories burned or active hours.
 3. The relation between daily steps taken, calories burned and sleeping pattern can not be further investigated without being too specific or in this case, being biased. 
 
