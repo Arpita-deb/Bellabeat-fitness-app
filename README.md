@@ -2,7 +2,7 @@
 ## Capstone Project from Google Data Analytics Professional Certificate course
 
 ## Introduction:
-Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I've analyzed smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
+Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I've analyzed smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product applied these insights to create high level recommendations for Bellabeat marketing strategy.
 
 ## Methodologies used:
 1. Exploratory Data Analysis
@@ -65,7 +65,7 @@ I used the R0CCC method to check the integrity and reliability of the data.
 
 3. **Comprehensiveness**:
    30 eligible FitBit users consented in submission of their health tracker data, that includes minute-level output for physical activity, heart rate, sleep monitoring. However, the dataset contains many limitations:
-   * There's no information about the person's age, gender, height, weight, profession etc, that helps us identify patterns of activity of individual users. We are not sure if the sample is representative of the population as a whole.
+   * There's no information about the person's age, gender, height, weight, profession etc, that could help us identify patterns of activity of individual users. We are not sure if the sample is representative of the population as a whole.
    * There is no information about the unit of distance.
    * There are no information about intensity, its unit and how it is measured.
    * There are inconsistencies in logged data, not all 30 users have data for full 30 days.
@@ -182,15 +182,11 @@ From the correlation matrix we can observe the followings-
 
 Although the data set had lots of limitations namely lack of reliablity, small number of users, lack of proper details etc, this short exploratory data analysis was able to identify some usage pattern of FitBit Fitness Tracker users.
 
-1. The average daily steps is 8108 steps which approximates the recommendation of 8000 steps per day by CDC (Center for Disease Control & Prevention). But in case of lightly active and sedentary users it is very low(~6800 & ~2800 respectively).
-
-2. The average very active minutes is 24 minutes. From the very active histogram we can see that for majority of the users very active minutes lie between 0 - 10 minutes.
-
-3. The average sedentary minutes is 799 minutes ~ 13.31 hours. This high value of sedentary minutes may be indicative of tracker not being worn throughout the day. However, from the analysis, we can see a visible pattern in sedentary users having more sedentary minutes (~ 19 hrs) than fairly active users (~13 hrs)
-
-4. The average calories burned is 2323 units. According to a study, for a woman the average daily calories burned is 2400 units while for men it is 3100 units. Sedentary people burn lowest calories as they tend to do less exercise compared to fairly active and very active users.
-
-5. The average minutes asleep is 419 minutes ~ 7 hours. People who does some light exercise daily sleeps more (~ 7 hrs) than people who do not exercise (sedentary) at all (~ 6 hrs) and also people who are very active (~ 4.7 hrs).
+* The average daily steps was 8108, close to the CDC (Center for Disease Control & Prevention) recommendation, but lower for lightly active and sedentary users.
+* The average very active minutes was 24, with most users having 0 - 10 minutes.
+* The average sedentary minutes was 799  ~ 13.31 hours, possibly due to tracker not being worn, and higher for sedentary users (~ 19 hrs) than fairly active users (~13 hrs).
+* The average calories burned was 2323, lower than the average for women and men, and lowest for sedentary users.
+* The average minutes of sleep was 419 ~ 7 hours, more for lightly active users than sedentary and very active users.
 
 # Phase 6: ACT
 
@@ -217,9 +213,10 @@ Some recommendation for the Bellabeat app:
 
 # Limitation of the Project:
 
-1. In this project the time of the day is not considered, so we cannot know which hour of the day a user is more active or when tends to take rest.
-2. Since the data set is very small, with only 24 users from the merged dataset, we cannot generalize the sleeping pattern, calories burned or active hours.
-3. The relation between daily steps taken, calories burned and sleeping pattern can not be further investigated without being too specific or in this case, being biased. 
+* The time of the day was not considered, so the activity patterns were not clear.
+* The data set was small, outdated, and unreliable, so the findings were not generalizable.
+* The relation between steps, calories, and sleep was not further investigated, to avoid bias and analysis paralysis.
+* There was no user data for Bellabeat products, for more direct and effective analysis.
 
 # References:
 
