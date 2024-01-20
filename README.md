@@ -1,20 +1,24 @@
 # How can a Wellness Technology Company play it smart?
 ## Capstone Project from Google Data Analytics Professional Certificate course
 
+![bellabeat](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/48a0d00b-2584-4ad0-924c-3c076f1dfe6d)
+
 ## Introduction:
 Bellabeat is a high-tech manufacturer of health-focused products for women. It is a successful small company, but has the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart fitness device data could help unlock new growth opportunities for the company. In this project I've analyzed smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product applied these insights to create high level recommendations for Bellabeat marketing strategy.
 
 ## Methodologies used:
-1. Exploratory Data Analysis
-2. Descriptive Statistics
-3. Data Visualization
+
+1. Data Cleaning and Processing
+2. Exploratory Data Analysis
+3. Descriptive Statistics
+4. Data Visualization
 
 # Phase-1 ASK
 
 ## Key stakeholders:
 
-* *Urška Sršen:* Bellabeat’s cofounder and Chief Creative Officer
-* *Sando Mur:* Mathematician and Bellabeat’s cofounder; key member of the Bellabeat executive team
+* *Urška Sršen:* Bellabeat’s Cofounder and Chief Creative Officer
+* *Sando Mur:* Mathematician and Bellabeat’s Cofounder; key member of the Bellabeat Executive Team
 * *Bellabeat marketing analytics team:* A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. I joined this team six months ago and have been busy learning about Bellabeat’s mission and business goals — as well as how I, as a junior data analyst, can help Bellabeat achieve them.
 
 ## Products: 
@@ -27,13 +31,14 @@ Bellabeat is a high-tech manufacturer of health-focused products for women. It i
   
 * *Spring:* This is a water bottle that tracks daily water intake using smart technology to ensure that you are appropriately hydrated throughout the day. The Spring bottle connects to the Bellabeat app to track your hydration levels.
   
-* *Bellabeat membership:* Bellabeat also offers a subscription-based membership program for users. Membership gives users 24/7 access to fully personalized guidance on nutrition, activity, sleep, health and
-beauty, and mindfulness based on their lifestyle and goals.
+* *Bellabeat membership:* Bellabeat also offers a subscription-based membership program for users. Membership gives users 24/7 access to fully personalized guidance on nutrition, activity, sleep, health and beauty, and mindfulness based on their lifestyle and goals.
 
 ## Statement of the Business task:
+
 Analyze smart device usage data from non-Bellabeat products to gain insights on how people are using these smart devices and then selecting a Bellabeat product to apply these insights to create high level recommendations for Bellabeat marketing strategy.
 
 ## Deliverables:
+
 Produce a report with the following deliverables:
 1. A clear summary of the business task
 2. A description of all data sources used
@@ -52,6 +57,7 @@ For this project I'll focus on the Bellabeat app. We want to know how FitBit use
 [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit) from Kaggle is the primary source for this project. It consists of 18 files that contain various information metrics based on which we can provide recommendation to the BellaBeat stakeholders.
 
 For this project I'll be using only 2 files and later merge them to create one file to work upon-
+
 * dailyActivity_merged.csv
 * sleepDay_merged.csv
 
@@ -84,7 +90,7 @@ I used the R0CCC method to check the integrity and reliability of the data.
    For data processing and cleaning I used R programming language and RStudio as IDE. 
 
 2. **Checking the data for errors:**
-   1. After importing the files, saved them in different data frames *activity* and *hourly_sleep*
+   1. After importing the files, saved them in different data frames *activity* and *hourly_sleep* respectively.
    2. Checked their data types using spec() function.
    3. Checked for null values. There was none.
    4. Checked for duplicates, and removed 3 duplicate entries from *hourly_sleep* dataset. 
@@ -94,18 +100,18 @@ I used the R0CCC method to check the integrity and reliability of the data.
    2. Created two copies of the cleaned data. Used the copied data for analysis.
    
 4. **Document the cleaning process:**
-   All the data-processing and transforming steps been documented in this report as well as in the code as well. 
+   All the data-processing and transforming steps been documented in this report as well as in the code. 
 
 # Phase-4 ANALYSIS
 
 The following steps are taken to analyse the data-
 1. **Aggregate the data:**
-   Merged the two datasets into one final data set *daily_activity_sleep*.
+   Merged the two datasets into one final data set named *daily_activity_sleep*.
    
 2. **Organize and format the data:**
    Selected the only columns required for the analysis.
 
-3. Performed descriptive statistics on the numerical columns and visualized the results through histograms.
+3. Performed descriptive statistics on the numeric columns and visualized the results through histograms.
 
   ![Screenshot (534)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/dd1c6e0e-3147-4ec5-8c3b-863d45253c4c)
 
@@ -134,7 +140,7 @@ The following steps are taken to analyse the data-
 6. Based on total daily steps taken, grouped the users into 4 categories -
      1. Sedentary- mean daily steps is less than 5000
      2. Lightly active-mean daily steps is between 5000 and 7499
-     3. Fairly active- mean daily steps is 7500 and 9999
+     3. Fairly active- mean daily steps is between 7500 and 9999
      4. Very active - mean daily steps is greater than 10000
 
 ![Screenshot (535)](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/2b9850c1-1830-466e-b9b5-08ae6dbd1f6e)
@@ -156,7 +162,7 @@ The following steps are taken to analyse the data-
         
 8. **Identify trends and relationships:**
 
- To find out the strength of relations between various variables I've created a correlation matrix. A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong relationship between variables, 0 a neutral relationship and -1 a not strong relationship.
+ To find out the strength of relations between various variables I've created a correlation matrix. A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong positive relationship between variables, 0 a neutral relationship and -1 a strong negative relationship.
 
 ![correlation matrix](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/cc3af7cf-ddbb-4052-94d2-360612e1009a)
 
@@ -170,7 +176,7 @@ From the correlation matrix we can observe the followings-
 
      ![cal vs tot step](https://github.com/Arpita-deb/Bellabeat-fitness-app/assets/139372731/2075b101-a0a7-4f9d-8441-06bce9d65177)
   
-  3. Sedentary minutes is negatively related with total steps,  total distance and lightly active minutes
+  3. Sedentary minutes is negatively related with total steps,  total distance and lightly active minutes.
   
   4. Active minutes have positive but weak correlation with total steps, total distance, fairly active minutes and calories burned.
   
@@ -180,7 +186,7 @@ From the correlation matrix we can observe the followings-
 
 ## Summary of the analysis:
 
-Although the data set had lots of limitations namely lack of reliablity, small number of users, lack of proper details etc, this short exploratory data analysis was able to identify some usage pattern of FitBit Fitness Tracker users.
+Although the data set had lots of limitations, namely lack of reliablity, small number of users, lack of proper details etc, this short exploratory data analysis was able to identify some usage pattern of FitBit Fitness Tracker users.
 
 * The average daily steps was 8108, close to the CDC (Center for Disease Control & Prevention) recommendation, but lower for lightly active and sedentary users.
 * The average very active minutes was 24, with most users having 0 - 10 minutes.
@@ -207,9 +213,9 @@ Some recommendation for the Bellabeat app:
 
 * If users want to improve their sleep, Bellabeat should consider using app notifications to go to bed and notify them if they've had enough sleep or if they overslept.
 
-* The Bellabeat app can notify the users when they're sitting (sedentary time) for more than that is healthy, and remind them to do some light activity like, taking a stroll outside, or stretching up a bit etc.
+* The Bellabeat app can notify the users when they're sitting (sedentary time) for more than that is healthy, and remind them to do some light activities like, taking a stroll outside, or stretching up a bit etc.
 
-* When a user does the recommended activities, the Bellabeat app can show motivational messages and reward them. That way the users will then be encouraged and they'll continue to do the hard work.
+* When a user does the recommended activities, the Bellabeat app can show motivational messages and reward them. That way the users will be encouraged and they'll continue to do the hard work.
 
 # Limitation of the Project:
 
