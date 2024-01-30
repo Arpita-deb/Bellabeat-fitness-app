@@ -189,10 +189,24 @@ From the correlation matrix we can observe the followings-
 Although the data set had lots of limitations, namely lack of reliablity, small number of users, lack of proper details etc, this short exploratory data analysis was able to identify some usage pattern of FitBit Fitness Tracker users.
 
 * The average daily steps was 8108, close to the CDC (Center for Disease Control & Prevention) recommendation, but lower for lightly active and sedentary users.
+
+> This means that most users walked around 8,000 steps per day, which is close to the CDC's recommendation of 10,000 steps per day for adults. However, this average was dragged down by the lightly active and sedentary users, who walked less than the average. This suggests that these users need to increase their physical activity to improve their health.
+
 * The average very active minutes was 24, with most users having 0 - 10 minutes.
+
+> This means that most users spent only 24 minutes per day doing vigorous physical activities, such as running, cycling, or playing sports. Moreover, most users had even less than 10 minutes of very active minutes per day. This is far below the CDC's recommendation of 75 minutes of vigorous physical activity per week for adults. This implies that most users need to boost their intensity of exercise to achieve the health benefits of physical activity.
+
 * The average sedentary minutes was 799  ~ 13.31 hours, possibly due to tracker not being worn, and higher for sedentary users (~ 19 hrs) than fairly active users (~13 hrs).
+
+> This means that most users spent around 13 hours per day being inactive, such as sitting, lying down, or sleeping. This could be partly because some users did not wear their tracker all the time, so the tracker did not record their movements. However, this could also indicate that some users had a sedentary lifestyle, which is associated with increased risks of obesity, diabetes, heart disease, and other chronic conditions. The sedentary users had the highest average of sedentary minutes, around 19 hours per day, while the fairly active users had the lowest, around 13 hours per day. This shows that there is a significant difference in the amount of time spent being inactive among different types of users.
+
 * The average calories burned was 2323, lower than the average for women and men, and lowest for sedentary users.
+
+> This means that most users burned around 2300 calories per day, which is lower than the average calorie expenditure for women (2000 calories) and men (2500 calories) in India. This could be because most users did not engage in enough physical activity to burn more calories. The sedentary users had the lowest average of calories burned, around 1900 calories per day, which is not enough to maintain a healthy weight. This suggests that these users need to increase their calorie intake and/or their physical activity to balance their energy expenditure.
+
 * The average minutes of sleep was 419 ~ 7 hours, more for lightly active users than sedentary and very active users.
+
+> This means that most users slept around 7 hours per night, which is close to the recommended amount of sleep for adults (7 to 9 hours) by the National Sleep Foundation. However, this average was influenced by the lightly active users, who slept more than the average, around 8 hours per night. The sedentary and very active users slept less than the average, around 6 hours per night. This indicates that these users may not get enough sleep to support their health and well-being. Sleep is essential for the proper functioning of the immune system, brain, heart, and other organs. Lack of sleep can impair cognitive performance, mood, memory, and alertness. Therefore, these users may benefit from improving their sleep quality and quantity.
 
 # Phase 6: ACT
 
@@ -207,7 +221,7 @@ The Bellabeat app can consider the following matrices to provide accurate inform
 
 As these variables are closely related to each other, one factor affects the others. Using the information from those matrices the Bellabeat app can further give information about user's weight, heart rate, cholesterol level, hydration level and suggest healthy eating habits, recommend physical exercises and back up their claims by providing scientific facts.
 
-Some recommendation for the Bellabeat app:
+## Recommendations for the Bellabeat App :
 
 * As users do more physical activity, they burn more calories, which in turn, helps them lose more weight. In addition to giving daily updates on calorie burning, Bellabeat can suggest some ideas for low-calorie intakes.
 
@@ -216,6 +230,16 @@ Some recommendation for the Bellabeat app:
 * The Bellabeat app can notify the users when they're sitting (sedentary time) for more than that is healthy, and remind them to do some light activities like, taking a stroll outside, or stretching up a bit etc.
 
 * When a user does the recommended activities, the Bellabeat app can show motivational messages and reward them. That way the users will be encouraged and they'll continue to do the hard work.
+
+## Recommendations for the Marketing team:
+
+* Social media marketing : Bellabeat can use social media platforms like Facebook, Instagram, and Twitter to reach potential customers by creating engaging posts that highlight the benefits of their products and services and run targeted ads that reach people interested in fitness and wellness. 
+
+* Influencer marketing : They can collaborate with fitness influencers to promote their products and ask them to review them on their social media channels. 
+
+* Email marketing : Bellabeat can use email marketing to keep their customers engaged and informed by sending regular newsletters that provide tips on fitness, wellness, and healthy eating and personalized emails that recommend products based on the user's activity level, sleep patterns, and other health data. 
+
+* Gamification : They can use gamification to make their app more engaging and fun by creating challenges that encourage users to be more active, sleep better, and eat healthier and offer rewards like badges, trophies, and discounts to users who complete these challenges.
 
 # Limitation of the Project:
 
